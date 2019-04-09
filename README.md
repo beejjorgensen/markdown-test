@@ -10,7 +10,7 @@
 * [Is a `struct` comparable to something in Python or JS? Is it like a class?](#q600)
 * [Can you have default parameters in the structs?](#q700)
 * [Why does unsigned char type accept a number when it's clearly referring to a character?](#q800)
-* [When I pass an array as an argument to a function, when do I use pointer notation and when do I use array notation ?](#q900)
+* [When I pass an array as an argument to a function, when do I use pointer notation and when do I use array notation?](#q900)
 * [Why do functions tend to return pointers to structs, and not just copies of the struct?](#q1000)
 * [Why do we subtract '0' from a char to convert it from ASCII to a numeric value?](#q1100)
 * [When do I need a pointer to a pointer?](#q1200)
