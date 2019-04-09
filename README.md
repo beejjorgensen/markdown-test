@@ -59,7 +59,7 @@
 * [How do I make my own Makefile?](#q5500)
 * [Why are there so many `printf()` variants? How do I know which one to use?](#q5600)
 * [Why is `main()` always at the bottom of the file?](#q5700)
-* [](#q5800)
+
 ## Questions
 
 ------------------------------------------------------------------------
@@ -101,7 +101,6 @@ following:
 git config --global core.autocrlf false
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -112,7 +111,6 @@ git config --global core.autocrlf false
 This means you got a segfault in your program. See [What is a segmentation fault
 and how do I stop it?](#what-is-segfault)
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -137,7 +135,6 @@ sudo brew update
 sudo brew upgrade gcc
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -160,7 +157,6 @@ void foo(int a)
     (void)a; // Do nothing, but at least the compiler will be quiet
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -181,7 +177,6 @@ you're not supposed to, or wiping out a disk you're not supposed to, etc.
 The worst you'll see is a `Segmentation fault` message which means your program
 tried to do something bad and the OS killed it.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -227,7 +222,6 @@ int main(void)
 }
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -260,7 +254,6 @@ values:
 ```c
 struct foo x = { .a = 10, .b = 20, .c = 30 };
 ```
-</p></details></p>
 
 ------------------------------------------------------------------------
 
@@ -312,7 +305,6 @@ If you never needed numbers larger than 255, you could use `unsigned char` for
 all your variables! (But since modern computers are at least as fast with `int`s
 as they are with `char`s, people just use `int`s.)
 
-</p></details></p>
 
 ------------------------------------------------------------------------
 
@@ -375,7 +367,6 @@ int main(void)
 This only applies for multidimensional arrays. For 1-dimensional arrays, the
 rule still applies; you still need to specify all dimensions except the first
 one... but since there is only one, you never need to specify it.
-</p></details></p>
 
 ------------------------------------------------------------------------
 
@@ -435,7 +426,6 @@ struct foo *my_func(void)
 The reason is because `f` vaporizes as soon as the function returns (since it's
 just a local variable), so any pointers to it are invalid.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -486,7 +476,6 @@ Example: `'7'` is value `55` (from the table), compute `55 - 48` and you get
 And since `'0'` is `48`, it's become idiomatic in C to convert ASCII digits to
 values by subtracting `'0'` from them.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -608,7 +597,6 @@ int main(void)
 ```
 
 Success!
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -689,7 +677,6 @@ property on the thing that `a` points to".
 And when we set `a` to `NULL`, it's just modifying `a`, not the thing that `a`
 points to (namely `f`).
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -724,7 +711,6 @@ int y, *x; // Also equivalent to the previous two examples
 
 It's idiomatic to keep the asterisk tucked up next to the variable that's the
 pointer.
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -809,7 +795,6 @@ functions that no other file will even need to call), those usually are either
 defined at the top of the file before their first call. If that's inconvenient,
 a prototype can be placed at the top of the `.c` file, instead.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -864,7 +849,6 @@ if (argc != 2) {
 }
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -885,7 +869,6 @@ Octal is rarely used in practice, and it's common for new C programmers to put
 One of the last common places to see octal numbers is in [Unix file
 permissions](https://en.wikipedia.org/wiki/File_system_permissions#Numeric_notation).
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -907,7 +890,6 @@ But dev for specific platforms like Windows probably happens in [Visual
 Studio](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio) instead of using
 `make` and the rest of it.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -935,7 +917,6 @@ pointers to data that you got back from `malloc()` when you're done with them.
 Also, when a program exits, all memory associated with it is freed by the OS,
 whether locals or `malloc()`d data.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -965,12 +946,11 @@ it doesn't have to do a lot of things behind your back.
 Additionally, people have been working on optimizing the output from C compilers
 for over 45 years. That's a big head start over other languages.
 
-</p></details></p>
 
 
-<a name="what-is-segfault"></a>------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-<a name="q2100"></a>
+<a name="what-is-segfault"></a><a name="q2100"></a>
 ### What is a segmentation fault and how do I stop it?
 
 It means you've accessed some memory you weren't supposed to. The OS killed your
@@ -988,7 +968,6 @@ pointers behind syntactic sugar).
 Maybe you're accessing a `NULL` pointer, or an array out of bounds, or modifying
 something you're not allowed to modify.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1002,7 +981,6 @@ you forgot to `free()` it.
 It's considered shoddy programming to not `free()` all the things you
 `malloc()`d, though. The OS will free it, but it's bad style to rely on that.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1023,7 +1001,6 @@ a `long` could hold much larger numbers.
 Use as little as you need. If a `float` or `int` can do the job, use them. If
 you need more precision or larger numbers, step up to the next larger type.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1039,7 +1016,6 @@ The reason is that strings are represented as `char*` types, and adding two
 Use the `strcat()` function in `<string.h>` to concatenate one string onto
 another.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1056,7 +1032,6 @@ types. If you don't, random garbage will be in them when you use them.
 > is out of scope for Lambda) and global variables get initialized to zero
 > automatically. But it's still good form to explicitly initialize them.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1078,7 +1053,6 @@ If you need big numbers _and_ a lot of precision _and_ none of the above are big
 enough, check out the [GNU Multiple Precision library](https://gmplib.org/). It
 does arbitrary precision arithmetic to as much precision as you have RAM.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1088,7 +1062,6 @@ does arbitrary precision arithmetic to as much precision as you have RAM.
 
 "C/C++ IntelliSense, debugging, and code browsing" by Microsoft is a good one.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1110,7 +1083,6 @@ Googling `printf example`, for example, will get you good results.
 
 Googling `man printf` will bring up the `man` page for `printf`.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1144,7 +1116,6 @@ If you're not seeing program output in the `Output` tab, try adding this to your
 We recommend Googling for `vscode gdb setup macos`, substituting whatever
 platform you're on for `macos` and setting the search date range to be recent.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1158,7 +1129,6 @@ memory address.)
 
 In practice, pointers are rarely printed except for debugging.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1168,7 +1138,6 @@ In practice, pointers are rarely printed except for debugging.
 
 No.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1179,7 +1148,6 @@ No.
 Not on a modern OS. It would be a security risk, so the OS makes sure this never
 happens.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1196,7 +1164,6 @@ In real life:
 * 1.5% (roughly) is double indirection, like `char**`.
 * And the remaining 0.5% is the rest of it.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1214,7 +1181,6 @@ pointer type.
 Maybe you meant to take the address of the right hand side? Or dereference the
 right hand side?
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1232,7 +1198,6 @@ operating system. In practice, this is very rare; people just call `malloc()`.
 
 In Unix, that syscall is `brk()` (or `sbrk()`). The behavior of this call is a bit strange no
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1301,7 +1266,6 @@ char *s = "Hello!";
 *s = 'B'; // segfault!
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1315,7 +1279,6 @@ When you return from a function, all those local variables are popped off the
 stack and thrown away. (Which is why local variables only last as long as the
 function!)
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1329,7 +1292,6 @@ Just assume the heap is a big, contiguous chunk of memory. It can be used for
 whatever, but in C, it is typically managed by `malloc()` and `free()` so that
 we don't have to worry about it.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1350,7 +1312,6 @@ to the same place as `stdout`. (The idea is that you can redirect all normal
 output to one place, and all error output to another place. Or suppress normal
 output while allowing error output.)
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1390,7 +1351,6 @@ And section 2 for the `mkdir()` syscall:
 man 2 mkdir
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1462,7 +1422,6 @@ void foo(int a)
     printf("\n");
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1482,7 +1441,6 @@ of the memory region and not bother moving the data.
 Also, if you shrink the space, `realloc()` will likely not copy the data. It'll
 just truncate it.
 
-</p></details></p>
 
 
 
@@ -1515,7 +1473,6 @@ spec](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf) section
 > space has been deallocated by a call to `free` or `realloc`, the behavior is
 > undefined.
 
-</p></details></p>
 
 ------------------------------------------------------------------------
 
@@ -1563,7 +1520,6 @@ That said, in conversation, if someone says _kilobyte_, odds are extremely high
 they mean 1024 bytes, not 1000 bytes. _kibibyte_ is uncommonly used in
 conversation.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1586,7 +1542,6 @@ that lists the minimum sizes of the types. If you want your code to be portable
 to other compilers and systems, choose a type with a minimum size that works for
 the numbers you need to hold.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1612,7 +1567,6 @@ the header file. This is where all the built-in header files are installed. On
 Unix machines, this tends to be the `/usr/include` directory, but it depends on
 the OS and compiler.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1652,7 +1606,6 @@ to it? Sure, why not?
 int *p = &a; // and there's a pointer to it
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1670,7 +1623,6 @@ If you're in `main()`, `return` also exits the running process.
 
 If you're in any other function, `return` just returns from that function.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1697,12 +1649,11 @@ So not only can it tell you if the strings are the same, it can tell you their
 relative sort order. And that means you can pass it in as the comparator
 function to the library built-in `qsort()` function.
 
-</p></details></p>
 
 
-<a name="ub"></a>------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-<a name="q5000"></a>
+<a name="ub"></a><a name="q5000"></a>
 ### What is "undefined behavior" in C?
 
 There are a number of things you're allowed to do in C where the compiler is
@@ -1730,7 +1681,6 @@ At Lambda, the most common things you can do to get UB is using bad pointer refe
 GCC with `-Wall -Wextra` should warn on a lot of these. This is why it's
 _really_ important to fix all those warnings.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1766,7 +1716,6 @@ p = NULL; // NOW p is NULL
 (Note that it's [undefined behavior](#ub) to _dereference_ a pointer after
 you've `free()`d it. But it's still OK to change that pointer's value.)
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1868,7 +1817,6 @@ And now the expansion of our line will be:
 
 That will work in all expected cases.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -1936,7 +1884,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 To fix, we need to figure out which file `foobaz()` is defined in, and make sure
 to pass that filename to the compiler when we build.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -2012,7 +1959,6 @@ When you build, you must specify all `.c` files on the command line:
 gcc -Wall -Wextra -o main main.c square.c
 ```
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -2113,7 +2059,6 @@ default.
 
 * [GNU make documentation](https://www.gnu.org/software/make/manual/make.html)
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -2142,7 +2087,6 @@ The first letters let you know what speciality each one has:
   at Lambda.
 * etc.
 
-</p></details></p>
 
 
 ------------------------------------------------------------------------
@@ -2161,19 +2105,3 @@ It's more common for C devs to put `main()` at the bottom of the file that
 contains it, and C devs expect it that way, but it's not wrong or frowned upon
 to use prototypes to put it at the top instead.
 
-</p></details></p>
-
-<!--
-TODO:
-
-
-<!--
-Template:
-
-------------------------------------------------------------------------
-
-<a name="q5800"></a>
-### 
-</p></details></p>
-
--->
